@@ -1,0 +1,276 @@
+header {
+	position:relative;
+	background: #fff;	
+}
+
+.top_bar {
+	@include clearfix;
+	padding: 5px;
+	background: #f8f8f8;
+	border: 1px solid rgba(0, 0, 0, 0.04);
+	.social_media {
+		li {
+			margin: 0 0 0 4px;
+			float: left;
+			width: 20px;
+			height: 20px;	
+			a {  
+				width: 20px;
+				height: 20px; 
+				line-height: 20px;
+				font-size: 12px;
+				&:hover{
+					height: 28px; 
+					margin-top: 0;
+				}				
+			} 					
+		}
+	}	
+}
+
+.top_bar_container {
+	width: 1040px;
+	min-height: 18px;
+	margin: 0 auto;	
+}
+
+.top_links, .top_links a {
+	color: $color-primary;
+}
+
+.top_links {
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 180%;	
+	> li {
+		list-style-position:outside;
+		line-height:100%;
+		display:inline-block;
+		padding:0 6px; 
+		border-color:#CDCDCD;
+		border-width: 0 1px 0 0;
+		border-style: solid;
+		position: relative;	
+		&:last-child {
+			border: none;	
+		}
+	}
+	a {
+		text-decoration: none;	
+	}
+}
+
+/* social media holder */
+.social_media{
+	float: right;
+	margin: 0;
+	padding: 0;		
+	list-style: none;
+	position: relative;
+	display: inline-block;
+	li{
+		float: left;
+		width: 24px;
+		height: 24px;
+		margin: 0 4px 4px 0;
+		&:hover span{
+			bottom: 33px;
+			opacity: 1; 
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";  
+			visibility: visible;
+			z-index: 999;   
+			min-width: 70px;
+		}		
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		a{ 
+			display: block; 
+			width: 24px;
+			height: 24px;		
+			line-height: 24px;
+			text-align: center;
+			background: #bbb;
+			color: #fff;
+			text-decoration: none; 
+			transition: all .2s; 	
+			&:hover{ 
+				color: #fff;
+				height: 29px;
+				margin-top: -5px;
+			} 						
+		}
+		span{
+			opacity: 0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  
+			visibility: none;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			text-align: center;
+			font-size: 11px;
+			line-height: 140%;
+			text-decoration: none;
+			bottom: 40px;
+			padding: 4px 0px;
+			cursor: default;	 
+			position: absolute;
+			text-indent: 0; 
+			color: #fff; 
+			z-index: -999;	 
+			transition: bottom .2s; 	
+		}								
+	}	
+} /*social_media*/
+
+
+
+
+
+
+
+
+.top_bar .social_media li span{
+	top: 48px;
+	bottom: auto;
+	transition: top .2s;
+}
+
+.top_bar .social_media li:hover span{
+	top: 26px;
+}
+ 
+.social_media [class^="icon-"]:before, .social_media [class*=" icon-"]:before {
+	margin-left: 1.5px;
+}
+
+/* social media colors */
+.social_media li:hover a,.social_media li:hover span{background-color: #bbb;} /*unbranded*/
+.social_media li.facebook:hover a,.social_media li.facebook:hover span{background-color: #3B5998 !important;} 
+.social_media li.twitter:hover a,.social_media li.twitter:hover span{background-color: #10c0ee !important;}   
+.social_media li.gplus:hover a,.social_media li.gplus:hover span{background-color: #e3614a !important;}  
+.social_media li.flickr:hover a,.social_media li.flickr:hover span{background-color: #ff3092 !important;} 	
+.social_media li.mail:hover a,.social_media li.mail:hover span{background-color: #999 !important;} 	
+.social_media li.lastfm:hover a,.social_media li.lastfm:hover span{background-color: #da260e !important;} 	
+.social_media li.dribbble:hover a,.social_media li.dribbble:hover span{background-color: #EA4C89 !important;} 
+.social_media li.linkedin:hover a,.social_media li.linkedin:hover span{background-color: #006e99 !important;} 	
+.social_media li.vimeo:hover a,.social_media li.vimeo:hover span{background-color: #0ec4ef !important;} 	
+.social_media li.youtube-play:hover a,.social_media li.youtube-play:hover span{background-color: #f3554f !important;} 	 
+.social_media li.instagram:hover a,.social_media li.instagram:hover span{background-color: #7b6455 !important;} 	
+.social_media li.behance:hover a,.social_media li.behance:hover span{background-color: #228cff !important;} 		
+.social_media li.dropbox:hover a,.social_media li.dropbox:hover span{background-color: #499dd6 !important;} 	  
+.social_media li.picasa:hover a,.social_media li.picasa:hover span{background-color: #aa7bbc !important;} 	
+.social_media li.rss:hover a,.social_media li.rss:hover span{background-color: #fd8900 !important;} 
+.social_media li.skype:hover a,.social_media li.skype:hover span{background-color: #00b0e1 !important;} 	 
+.social_media li.stumbleupon:hover a,.social_media li.stumbleupon:hover span{background-color: #6cc977 !important;} 	 
+.social_media li.pinterest:hover a,.social_media li.pinterest:hover span{background-color: #d62930 !important;}  
+.social_media li.github:hover a,.social_media li.github:hover span{background-color: #888 !important;} 	
+.social_media li.tumblr:hover a,.social_media li.tumblr:hover span{background-color: #456885 !important;} 	
+.social_media li.spotify:hover a,.social_media li.spotify:hover span{background-color: #afd102 !important;} 	
+.social_media li.evernote:hover a,.social_media li.evernote:hover span{background-color: #6fbd45 !important;} 	
+.social_media li.flattr:hover a,.social_media li.flattr:hover span{background-color: #f7af30 !important;} 	
+.social_media li.paypal:hover a,.social_media li.paypal:hover span{background-color: #003f70 !important;} 	
+.social_media li.vkontakte:hover a,.social_media li.vkontakte:hover span{background-color: #2f6893 !important;} 	
+.social_media li.soundcloud:hover a,.social_media li.soundcloud:hover span{background-color: #F76700 !important;} 	 
+.social_media li.foursquare:hover a,.social_media li.foursquare:hover span{background-color: rgb(36,178,237) !important;}
+.social_media li.delicious:hover a,.social_media li.delicious:hover span{background-color: rgb(51,153,255) !important;} 	 
+.social_media li.forrst:hover a,.social_media li.forrst:hover span{background-color: rgb(90,153,103) !important;} 	  
+.social_media li.ebay:hover a,.social_media li.ebay:hover span{background-color: rgb(221,59,74) !important;} 	 
+.social_media li.android:hover a,.social_media li.android:hover span{background-color: rgb(128,189,1) !important;} 	   
+.social_media li.xing:hover a,.social_media li.xing:hover span{background-color: rgb(210,214,0) !important;} 	 
+.social_media li.reddit:hover a,.social_media li.reddit:hover span{background-color: rgb(255,69,0) !important;} 	 
+.social_media li.digg:hover a,.social_media li.digg:hover span{background-color: rgb(0,0,0) !important;} 	 
+.social_media li.macstore:hover a,.social_media li.macstore:hover span{background-color: rgb(27,189,251) !important;} 	 
+.social_media li.myspace:hover a,.social_media li.myspace:hover span{background-color: rgb(9,17,164) !important;} 	 
+.social_media li.amazon:hover a,.social_media li.amazon:hover span{background-color: rgb(245,147,24) !important;} 	 
+.social_media li.stackoverflow:hover a,.social_media li.stackoverflow:hover span{background-color: rgb(254,122,21) !important;} 
+
+.header_contents {
+	display: table;
+	margin: 0 auto;
+	padding: 15px 0;
+	position: relative;
+	> section {
+		display: inline-block; 
+		vertical-align: middle;
+		padding: 10px;		
+	}
+	.logo_center {
+		text-align: center;		
+	}
+	.logo_right {
+		text-align: right;		
+	}
+}
+
+.logo {
+	&.logo_left {
+		float: left;	 
+	}
+	&.logo_right {
+		float: right;	
+	}
+	&.logo_center{
+		margin: auto;
+		display: table;
+		padding-left: 25px;
+		padding-right: 25px;
+	}	
+	img {
+		max-width: 100%;	
+	}
+	h1, h1 a {
+		font-size:26px;
+		line-height: 100%;
+		color: #444;
+		text-decoration:none;
+		display: inline-block;
+		position: relative;		
+	}
+	a:hover {
+		opacity: 0.8;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  
+		filter:alpha(opacity=80);		
+	}
+}
+
+
+.sticky_logo{
+	width: 100px;
+	max-width: 100px;	
+	height: 32px;
+	display: none;
+	float: left;
+	margin-right: 10px;
+	padding: 3px;
+	img {
+		height: auto;
+		max-height: 100%;
+		max-width: 100%;
+		width: auto;
+	}	
+}
+
+.stuck .sticky_logo{
+	display: block;
+}
+
+
+.slogan_text{
+	color: #aaa;
+	font-size: 14px;
+	text-align: right;
+	line-height: 100%;
+	padding: 0;
+	&.left_side{
+		text-align: left;
+	}	
+}
+
