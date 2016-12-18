@@ -1,7 +1,9 @@
 body {
-	min-width: 1080px;
 	color: #888;
 	background: #FFF no-repeat;
 	font: normal 13px/175% 'PT Sans',sans-serif;	
+	@include media('desktop-limit') {
+		min-width: 980px;	
+	}
 }
 

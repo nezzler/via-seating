@@ -1,6 +1,12 @@
 header {
 	position:relative;
 	background: #fff;	
+	section > section {
+		@media only screen and (max-width: 959px) {
+			margin: 15px 0;
+			padding: 0 10px;
+		}			
+	}
 }
 
 .top_bar {
@@ -9,6 +15,9 @@ header {
 	background: #f8f8f8;
 	border: 1px solid rgba(0, 0, 0, 0.04);
 	.social_media {
+		@include media('desktop') {
+			float: right;	
+		}
 		li {
 			margin: 0 0 0 4px;
 			float: left;
@@ -29,9 +38,19 @@ header {
 }
 
 .top_bar_container {
-	width: 1040px;
+	width: 100%;
 	min-height: 18px;
 	margin: 0 auto;	
+	text-align: center;
+	@include media('desktop') {
+		text-align: left;
+	}
+	@include media('desktop-limit') {
+		width: 940px;	
+	}
+	@include media('wide') {
+		width: 1040px;	
+	}
 }
 
 .top_links, .top_links a {
@@ -40,21 +59,32 @@ header {
 
 .top_links {
 	display: block;
-	float: left;
-	margin: 0 10px 0 0;
+	margin: auto auto 10px;
 	padding: 0;
 	font-size: 11px;
 	font-weight: normal;
 	line-height: 180%;	
+	@include media('desktop') {
+		float: left;	
+		margin: 0 10px 0 0;
+	}
 	> li {
 		list-style-position:outside;
 		line-height:100%;
 		display:inline-block;
+		margin: 10px 0;
 		padding:0 6px; 
 		border-color:#CDCDCD;
 		border-width: 0 1px 0 0;
 		border-style: solid;
 		position: relative;	
+		font-size: 14px;
+		line-height: 200%;
+		@include media('desktop') {
+			margin: 0;
+			line-height: 100%;
+			font-size: 11px;	
+		}
 		&:last-child {
 			border: none;	
 		}
@@ -66,7 +96,6 @@ header {
 
 /* social media holder */
 .social_media{
-	float: right;
 	margin: 0;
 	padding: 0;		
 	list-style: none;
@@ -193,14 +222,34 @@ header {
 .social_media li.stackoverflow:hover a,.social_media li.stackoverflow:hover span{background-color: rgb(254,122,21) !important;} 
 
 .header_contents {
-	display: table;
+	@include clearfix;
+	position: static;
+	width: 100%;
 	margin: 0 auto;
 	padding: 15px 0;
-	position: relative;
+	@include media('desktop') {
+		position: relative;
+		display: table;	
+	}
+	@include media('desktop-limit') {
+		width: 980px;
+	}
+	@include media('wide') {
+		width: initial;
+	}
 	> section {
-		display: inline-block; 
-		vertical-align: middle;
-		padding: 10px;		
+		margin: 15px 0;
+		padding: 0 10px;
+		vertical-align: middle;	
+		box-sizing: content-box;
+		@media only screen and (max-width: 959px) {
+			width: 100%;	
+		}
+		@include media('desktop') {
+			display: inline-block;
+			margin: 0;
+			padding: 10px;	
+		}
 	}
 	.logo_center {
 		text-align: center;		
@@ -274,3 +323,28 @@ header {
 	}	
 }
 
+#mobile_bar {
+	@include clearfix;
+	background: none repeat scroll 0 0 #353535;
+	color: #999;
+	font-size: 23px;
+	padding: 10px 8px;
+	@include media('desktop') {
+		display: none;	
+	}
+	> div {
+		cursor: pointer;
+		padding: 10px 15px;
+		display: block;
+		width: 50%;	
+	}
+}
+
+.mobile_menu_control {
+	float: left;
+}
+
+.top_bar_control {
+	float: right;
+	text-align: right;
+}
