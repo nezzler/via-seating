@@ -10,9 +10,12 @@
 }
 
 .featured_image {
+	max-width: 400px;
+	margin: 0 auto;
 	border-radius: 50%;
 	overflow: hidden;
 	border: 2px solid transparent;
+	transform: translateZ(0);
 	transition: border .3s ease;	
 	&:hover {
 		border: 2px solid #FF9F37;
